@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Inter:wght@500;700;900&display=swap');
+
+:root{
+  --ink:#111110;
+  --paper:#FAFAF8;
+  --mist:#98968D;
+  --line:#E4E2D9;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html,body{ width:1080px; height:1350px; overflow:hidden; }
+body{ font-family:'Inter',sans-serif; background:transparent; }
+
+/* ============ COVER / HOOK — slide 1, provocative/curiosity hook ============ */
+.tpl-cover{
+  width:1080px; height:1350px; position:relative; overflow:hidden;
+  color:var(--paper);
+  background-image:
+    linear-gradient(to top, rgba(10,10,9,0.94) 0%, rgba(10,10,9,0.55) 38%, rgba(10,10,9,0.15) 62%, rgba(10,10,9,0.35) 100%),
+    var(--bg-image);
+  background-size:cover;
+  background-position:center;
+}
+.tpl-cover .kicker{
+  position:absolute; top:64px; left:64px;
+  font-family:'Space Mono',monospace; font-size:26px;
+  letter-spacing:0.12em; text-transform:uppercase;
+  color:rgba(250,250,248,0.75);
+}
+.tpl-cover .swipe{
+  position:absolute; top:56px; right:56px;
+  width:64px; height:64px; border-radius:50%;
+  border:2px solid rgba(250,250,248,0.55);
+  display:flex; align-items:center; justify-content:center;
+}
+.tpl-cover .swipe svg{ width:26px; height:26px; display:block; }
+.tpl-cover .body{ position:absolute; left:64px; right:64px; bottom:120px; }
+.tpl-cover .eyebrow{
+  font-family:'Space Mono',monospace; font-size:26px;
+  text-transform:uppercase; letter-spacing:0.08em;
+  color:rgba(250,250,248,0.7); margin-bottom:12px;
+}
+.tpl-cover h1{
+  font-family:'Anton',sans-serif; font-size:96px;
+  line-height:0.94; text-transform:uppercase;
+}
+.tpl-cover .sub{
+  font-family:'Inter',sans-serif; font-weight:500; font-size:32px;
+  color:rgba(250,250,248,0.8); margin-top:20px; max-width:820px;
+}
+.tpl-cover .dots{ position:absolute; bottom:56px; left:64px; display:flex; gap:10px; }
+.tpl-cover .dots span{ width:10px; height:10px; border-radius:50%; background:rgba(250,250,248,0.35); }
+.tpl-cover .dots span.active{ background:var(--paper); }
+
+/* ============ STATEMENT / FACT — informational body slides ============ */
+.tpl-statement{ width:1080px; height:1350px; position:relative; overflow:hidden; background:var(--paper); color:var(--ink); }
+.tpl-statement .swipe{
+  position:absolute; top:56px; right:56px;
+  width:64px; height:64px; border-radius:50%;
+  border:2px solid var(--ink);
+  display:flex; align-items:center; justify-content:center;
+}
+.tpl-statement .swipe svg{ width:26px; height:26px; display:block; }
+.tpl-statement .index{ position:absolute; top:64px; left:64px; font-family:'Space Mono',monospace; font-size:26px; color:var(--mist); }
+.tpl-statement .byline{ position:absolute; left:64px; top:250px; font-family:'Space Mono',monospace; font-size:26px; color:var(--mist); }
+.tpl-statement .body{
+  position:absolute; left:64px; right:120px; top:220px; bottom:220px;
+  display:flex; align-items:center;
+}
+.tpl-statement h1{ font-family:'Anton',sans-serif; font-size:72px; line-height:1.08; text-transform:uppercase; }
+.tpl-statement .footer{
+  position:absolute; bottom:56px; left:64px; right:64px;
+  display:flex; justify-content:space-between;
+  font-family:'Inter',sans-serif; font-weight:900; font-size:28px;
+  letter-spacing:0.02em; text-transform:uppercase;
+}
+
+/* ============ STAT / NUMBER — Stratum signature, "X people rated..." ============ */
+.tpl-stat{ width:1080px; height:1350px; position:relative; overflow:hidden; background:var(--ink); color:var(--paper); }
+.tpl-stat .kicker{
+  position:absolute; top:64px; left:64px;
+  font-family:'Space Mono',monospace; font-size:26px;
+  text-transform:uppercase; letter-spacing:0.08em; color:rgba(250,250,248,0.6);
+}
+.tpl-stat .swipe{
+  position:absolute; top:56px; right:56px;
+  width:64px; height:64px; border-radius:50%;
+  border:2px solid rgba(250,250,248,0.5);
+  display:flex; align-items:center; justify-content:center;
+}
+.tpl-stat .swipe svg{ width:26px; height:26px; display:block; }
+.tpl-stat .rings{ position:absolute; top:430px; left:50%; transform:translateX(-50%); width:340px; height:220px; }
+.tpl-stat .rings svg{ width:100%; height:100%; }
+.tpl-stat .num{ position:absolute; top:640px; left:0; right:0; text-align:center; font-family:'Anton',sans-serif; font-size:170px; line-height:1; }
+.tpl-stat .cap{
+  position:absolute; top:840px; left:64px; right:64px; text-align:center;
+  font-family:'Inter',sans-serif; font-weight:700; font-size:38px; line-height:1.15; text-transform:uppercase;
+}
+.tpl-stat .footer{
+  position:absolute; bottom:56px; left:64px; right:64px;
+  display:flex; justify-content:space-between;
+  font-family:'Inter',sans-serif; font-weight:900; font-size:26px;
+  letter-spacing:0.02em; text-transform:uppercase; color:rgba(250,250,248,0.6);
+}
+
+
+/* ============ QUOTE — pull-quote / relatable-line slide, breaks up the rhythm ============ */
+.tpl-quote{ width:1080px; height:1350px; position:relative; overflow:hidden; background:var(--line); color:var(--ink); }
+.tpl-quote .index{ position:absolute; top:64px; left:64px; font-family:'Space Mono',monospace; font-size:26px; color:var(--mist); }
+.tpl-quote .swipe{
+  position:absolute; top:56px; right:56px;
+  width:64px; height:64px; border-radius:50%;
+  border:2px solid var(--ink);
+  display:flex; align-items:center; justify-content:center;
+}
+.tpl-quote .swipe svg{ width:26px; height:26px; display:block; }
+.tpl-quote .mark{ position:absolute; top:220px; left:64px; font-family:'Anton',sans-serif; font-size:160px; line-height:1; color:rgba(17,17,16,0.15); }
+.tpl-quote .body{ position:absolute; left:64px; right:100px; top:340px; bottom:220px; display:flex; align-items:center; }
+.tpl-quote p{ font-family:'Inter',sans-serif; font-weight:700; font-size:58px; line-height:1.22; }
+.tpl-quote .footer{
+  position:absolute; bottom:56px; left:64px; right:64px;
+  display:flex; justify-content:space-between;
+  font-family:'Inter',sans-serif; font-weight:900; font-size:28px;
+  letter-spacing:0.02em; text-transform:uppercase;
+}
+
+/* ============ PROMPT — direct question to the viewer, built for comments/duets ============ */
+.tpl-prompt{ width:1080px; height:1350px; position:relative; overflow:hidden; background:var(--ink); color:var(--paper); display:flex; align-items:center; justify-content:center; text-align:center; }
+.tpl-prompt .index{ position:absolute; top:64px; left:64px; font-family:'Space Mono',monospace; font-size:26px; color:rgba(250,250,248,0.55); }
+.tpl-prompt .inner{ padding:0 80px; }
+.tpl-prompt .eyebrow{
+  font-family:'Space Mono',monospace; font-size:26px; letter-spacing:0.08em;
+  text-transform:uppercase; color:rgba(250,250,248,0.6); margin-bottom:28px;
+}
+.tpl-prompt h1{ font-family:'Anton',sans-serif; font-size:82px; line-height:1.05; text-transform:uppercase; }
+.tpl-prompt .footer{
+  position:absolute; bottom:56px; left:64px; right:64px;
+  display:flex; justify-content:space-between;
+  font-family:'Inter',sans-serif; font-weight:900; font-size:26px;
+  letter-spacing:0.02em; text-transform:uppercase; color:rgba(250,250,248,0.6);
+}

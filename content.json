@@ -1,0 +1,411 @@
+{
+  "_notes": [
+    "1 post/day across 12 days, rotating book -> film -> album -> repeat, all at 8:00 AM ET.",
+    "Slide structure now varies by carousel (3-4 content slides + your closing slide auto-appended), so the feed doesn't read as the same 3 beats every day.",
+    "Prompt slides end most carousels with a direct question, built to pull comments, not rage. Provocative through curiosity and relatable specificity, not by being mean or making things up.",
+    "Statement/quote slides stay observational, never invented statistics presented as fact.",
+    "Stat slides carry the real waitlist number (1009), update this whenever the count meaningfully changes.",
+    "closing-slide.png is appended automatically by render.js as the final slide of every carousel, no manual copying needed."
+  ],
+  "carousels": [
+    {
+      "slug": "book-never-told-anyone",
+      "category": "book",
+      "day": "Day 1",
+      "publishTimeET": "8:00 AM",
+      "slides": [
+        {
+          "type": "cover",
+          "kicker": "Stratum · Field Notes",
+          "eyebrow": "Books",
+          "title": "The Book You Never<br>Told Anyone About",
+          "sub": "You finished it at 2am and never mentioned it again",
+          "bgImage": "book_1",
+          "dotCount": 3
+        },
+        {
+          "type": "statement",
+          "index": "02 / 3",
+          "byline": "Sound Familiar?",
+          "title": "Your Reading Taste Is<br>Basically A Secret<br>At This Point",
+          "footerRight": "Taste, Mapped"
+        },
+        {
+          "type": "stat",
+          "kicker": "Rated On Stratum",
+          "number": "1009",
+          "caption": "People Also Picked This As Their Life-Changing Read"
+        }
+      ],
+      "caption": "The book you finished at 2am and never told a single person about. Turns out you're not the only one.\n\nStratum matches you with people who rate books, films, and albums exactly like you do. Waitlist link in bio."
+    },
+    {
+      "slug": "film-everyone-pretends",
+      "category": "film",
+      "day": "Day 2",
+      "publishTimeET": "8:00 AM",
+      "slides": [
+        {
+          "type": "cover",
+          "kicker": "Stratum · Field Notes",
+          "eyebrow": "Film",
+          "title": "The Movie Everyone<br>Pretends To Love",
+          "sub": "Nobody actually watched it, they just nodded along",
+          "bgImage": "film_1",
+          "dotCount": 4
+        },
+        {
+          "type": "quote",
+          "index": "02 / 4",
+          "line": "Everyone Claims The Same Favorite. Almost Nobody Means It.",
+          "footerRight": "Taste, Mapped"
+        },
+        {
+          "type": "stat",
+          "kicker": "Rated On Stratum",
+          "number": "1009",
+          "caption": "People Admitted Their Real Favorite Was Never The Impressive One"
+        },
+        {
+          "type": "prompt",
+          "index": "04 / 4",
+          "eyebrow": "Your Turn",
+          "title": "What's The Movie<br>You Actually Rewatch?"
+        }
+      ],
+      "caption": "Be honest, when's the last time your \"favorite movie\" was actually your favorite?\n\nWhat's the one you actually rewatch? Drop it below.\n\nStratum finds your taste twins across books, film, and music. Waitlist link in bio."
+    },
+    {
+      "slug": "album-nobody-heard-of",
+      "category": "album",
+      "day": "Day 3",
+      "publishTimeET": "8:00 AM",
+      "slides": [
+        {
+          "type": "cover",
+          "kicker": "Stratum · Field Notes",
+          "eyebrow": "Albums",
+          "title": "The Album Nobody<br>Around You Knows",
+          "sub": "You've played it 200 times, zero people you know recognize it",
+          "bgImage": "album_1",
+          "dotCount": 4
+        },
+        {
+          "type": "stat",
+          "kicker": "Rated On Stratum",
+          "number": "1009",
+          "caption": "People Have This Exact Album On Repeat Right Now"
+        },
+        {
+          "type": "quote",
+          "index": "03 / 4",
+          "line": "Good Taste Doesn't Need An Audience. It Just Gets Lonely Sometimes.",
+          "footerRight": "Taste, Mapped"
+        },
+        {
+          "type": "prompt",
+          "index": "04 / 4",
+          "eyebrow": "Tell Us",
+          "title": "What Album Is<br>Nobody Else Into?"
+        }
+      ],
+      "caption": "The album you've had on repeat for months and nobody around you has ever heard of.\n\nWhat's yours? Tell us below.\n\nStratum matches you with people who share your exact taste. Waitlist link in bio."
+    },
+    {
+      "slug": "book-everyone-says-they-read",
+      "category": "book",
+      "day": "Day 4",
+      "publishTimeET": "8:00 AM",
+      "slides": [
+        {
+          "type": "cover",
+          "kicker": "Stratum · Field Notes",
+          "eyebrow": "Books",
+          "title": "Everyone Says They Read.<br>Nobody Says What.",
+          "sub": "Ask someone their favorite book and watch them stall",
+          "bgImage": "book_2",
+          "dotCount": 3
+        },
+        {
+          "type": "stat",
+          "kicker": "Rated On Stratum",
+          "number": "1009",
+          "caption": "People Picked The Exact Same Book As Their All-Time Favorite"
+        },
+        {
+          "type": "prompt",
+          "index": "03 / 3",
+          "eyebrow": "Be Honest",
+          "title": "What's The Book You<br>Never Actually Finished?"
+        }
+      ],
+      "caption": "Ask someone their favorite book and watch them stall. It's scarier to admit than people think.\n\nWhat's the book you never actually finished? No judgment.\n\nWaitlist link in bio."
+    },
+    {
+      "slug": "film-personality-test",
+      "category": "film",
+      "day": "Day 5",
+      "publishTimeET": "8:00 AM",
+      "slides": [
+        {
+          "type": "cover",
+          "kicker": "Stratum · Field Notes",
+          "eyebrow": "Film",
+          "title": "Your Favorite Movie Is<br>A Personality Test",
+          "sub": "Most people just guess what that says. This one actually shows you",
+          "bgImage": "film_2",
+          "dotCount": 3
+        },
+        {
+          "type": "statement",
+          "index": "02 / 3",
+          "byline": "Sound Familiar?",
+          "title": "You Can Tell A Lot<br>About Someone From<br>One Film Pick",
+          "footerRight": "Taste, Mapped"
+        },
+        {
+          "type": "stat",
+          "kicker": "Rated On Stratum",
+          "number": "1009",
+          "caption": "People Chose This As Their Single Defining Film"
+        }
+      ],
+      "caption": "Your favorite movie says more about you than you think.\n\nStratum turns that into an actual match, not a guess. Waitlist link in bio."
+    },
+    {
+      "slug": "album-song-stuck-in-head",
+      "category": "album",
+      "day": "Day 6",
+      "publishTimeET": "8:00 AM",
+      "slides": [
+        {
+          "type": "cover",
+          "kicker": "Stratum · Field Notes",
+          "eyebrow": "Albums",
+          "title": "The Song Stuck<br>In Your Head",
+          "sub": "You've never once found someone who gets why",
+          "bgImage": "album_2",
+          "dotCount": 4
+        },
+        {
+          "type": "quote",
+          "index": "02 / 4",
+          "line": "Somewhere Someone Is Playing This On The Exact Same Loop.",
+          "footerRight": "Taste, Mapped"
+        },
+        {
+          "type": "stat",
+          "kicker": "Rated On Stratum",
+          "number": "1009",
+          "caption": "People Rated This Album Exactly The Way You Did"
+        },
+        {
+          "type": "prompt",
+          "index": "04 / 4",
+          "eyebrow": "Confess",
+          "title": "What Song Have You<br>Never Told Anyone You Love?"
+        }
+      ],
+      "caption": "The song that's lived rent free in your head for weeks and nobody gets why.\n\nWhat's yours? We want to know.\n\nStratum link in bio."
+    },
+    {
+      "slug": "book-shelf-says-more",
+      "category": "book",
+      "day": "Day 7",
+      "publishTimeET": "8:00 AM",
+      "slides": [
+        {
+          "type": "cover",
+          "kicker": "Stratum · Field Notes",
+          "eyebrow": "Books",
+          "title": "Your Bookshelf Says<br>More Than Your Bio",
+          "sub": "Nobody reads bios, everyone reads spines",
+          "bgImage": "book_3",
+          "dotCount": 4
+        },
+        {
+          "type": "stat",
+          "kicker": "Rated On Stratum",
+          "number": "1009",
+          "caption": "People Have This Same Book As Their All-Time Favorite"
+        },
+        {
+          "type": "quote",
+          "index": "03 / 4",
+          "line": "A Bookshelf Is A Confession You Didn't Know You Made.",
+          "footerRight": "Taste, Mapped"
+        },
+        {
+          "type": "prompt",
+          "index": "04 / 4",
+          "eyebrow": "Show Us",
+          "title": "What Book On Your Shelf<br>Do People Always Ask About?"
+        }
+      ],
+      "caption": "Nobody reads bios. Everyone reads spines.\n\nWhat's the one book on your shelf people always ask about?\n\nStratum link in bio."
+    },
+    {
+      "slug": "film-rewatch-alone",
+      "category": "film",
+      "day": "Day 8",
+      "publishTimeET": "8:00 AM",
+      "slides": [
+        {
+          "type": "cover",
+          "kicker": "Stratum · Field Notes",
+          "eyebrow": "Film",
+          "title": "You Rewatch It Alone.<br>Every Single Time.",
+          "sub": "Nobody else wants to watch it again, you don't care",
+          "bgImage": "film_3",
+          "dotCount": 3
+        },
+        {
+          "type": "stat",
+          "kicker": "Rated On Stratum",
+          "number": "1009",
+          "caption": "People Rewatch This Same Film On Repeat"
+        },
+        {
+          "type": "prompt",
+          "index": "03 / 3",
+          "eyebrow": "Own It",
+          "title": "What Do You Rewatch<br>That Nobody Else Will?"
+        }
+      ],
+      "caption": "The movie you rewatch alone, every single time, and nobody else wants to watch it again with you.\n\nWhat's yours?\n\nStratum link in bio."
+    },
+    {
+      "slug": "album-deep-cuts-memorized",
+      "category": "album",
+      "day": "Day 9",
+      "publishTimeET": "8:00 AM",
+      "slides": [
+        {
+          "type": "cover",
+          "kicker": "Stratum · Field Notes",
+          "eyebrow": "Albums",
+          "title": "Nobody You Know Has<br>The Deep Cuts",
+          "sub": "You know every b-side, they know the single",
+          "bgImage": "album_3",
+          "dotCount": 3
+        },
+        {
+          "type": "statement",
+          "index": "02 / 3",
+          "byline": "Sound Familiar?",
+          "title": "Knowing The Album Front<br>To Back Is A Different<br>Kind Of Fan",
+          "footerRight": "Taste, Mapped"
+        },
+        {
+          "type": "stat",
+          "kicker": "Rated On Stratum",
+          "number": "1009",
+          "caption": "People Know Every Track On This Album By Heart"
+        }
+      ],
+      "caption": "Knowing every b-side is a different kind of fan.\n\nStratum finds the people who know the album as well as you do. Waitlist link in bio."
+    },
+    {
+      "slug": "book-ruined-every-book-after",
+      "category": "book",
+      "day": "Day 10",
+      "publishTimeET": "8:00 AM",
+      "slides": [
+        {
+          "type": "cover",
+          "kicker": "Stratum · Field Notes",
+          "eyebrow": "Books",
+          "title": "The Book That Ruined<br>Every Book After It",
+          "sub": "Nothing has hit the same since",
+          "bgImage": "book_4",
+          "dotCount": 4
+        },
+        {
+          "type": "quote",
+          "index": "02 / 4",
+          "line": "One Book Sets A Bar Everything Else Quietly Fails To Clear.",
+          "footerRight": "Taste, Mapped"
+        },
+        {
+          "type": "stat",
+          "kicker": "Rated On Stratum",
+          "number": "1009",
+          "caption": "People Say This Book Ruined Every Other Book For Them"
+        },
+        {
+          "type": "prompt",
+          "index": "04 / 4",
+          "eyebrow": "We Want To Know",
+          "title": "What Book Ruined<br>Every Book After It?"
+        }
+      ],
+      "caption": "One book sets a bar everything else quietly fails to clear.\n\nWhat book ruined every book after it for you?\n\nStratum link in bio."
+    },
+    {
+      "slug": "film-splits-friend-groups",
+      "category": "film",
+      "day": "Day 11",
+      "publishTimeET": "8:00 AM",
+      "slides": [
+        {
+          "type": "cover",
+          "kicker": "Stratum · Field Notes",
+          "eyebrow": "Film",
+          "title": "This Movie Splits<br>Every Friend Group",
+          "sub": "You either love it, or you've never actually finished it",
+          "bgImage": "film_4",
+          "dotCount": 4
+        },
+        {
+          "type": "stat",
+          "kicker": "Rated On Stratum",
+          "number": "1009",
+          "caption": "People Are Firmly On Your Side Of This Movie"
+        },
+        {
+          "type": "quote",
+          "index": "03 / 4",
+          "line": "There Is No Neutral Opinion On This One. Never Has Been.",
+          "footerRight": "Taste, Mapped"
+        },
+        {
+          "type": "prompt",
+          "index": "04 / 4",
+          "eyebrow": "Pick A Side",
+          "title": "Which Movie Splits<br>Your Friend Group?"
+        }
+      ],
+      "caption": "There is no neutral opinion on this one. Never has been.\n\nWhich movie splits your friend group in half?\n\nStratum link in bio."
+    },
+    {
+      "slug": "album-guilty-pleasure",
+      "category": "album",
+      "day": "Day 12",
+      "publishTimeET": "8:00 AM",
+      "slides": [
+        {
+          "type": "cover",
+          "kicker": "Stratum · Field Notes",
+          "eyebrow": "Albums",
+          "title": "The Album You'd Never<br>Admit To Loving",
+          "sub": "Not because it's bad, because nobody would get it",
+          "bgImage": "album_4",
+          "dotCount": 3
+        },
+        {
+          "type": "stat",
+          "kicker": "Rated On Stratum",
+          "number": "1009",
+          "caption": "People Have The Exact Same Guilty-Pleasure Favorite"
+        },
+        {
+          "type": "prompt",
+          "index": "03 / 3",
+          "eyebrow": "Own It",
+          "title": "What's Your Actual<br>Guilty-Pleasure Favorite?"
+        }
+      ],
+      "caption": "Not because it's bad. Because nobody would get it.\n\nWhat's your actual guilty-pleasure favorite? Be honest.\n\nStratum link in bio."
+    }
+  ]
+}

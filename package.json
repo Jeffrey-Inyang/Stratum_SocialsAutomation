@@ -1,0 +1,12 @@
+{
+  "name": "stratum-slide-renderer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Renders Stratum carousel content.json into numbered PNG slides via headless Chrome.",
+  "scripts": {
+    "render": "node render.js"
+  },
+  "dependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}

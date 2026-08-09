@@ -1,0 +1,38 @@
+name: Daily Instagram Post
+
+on:
+  schedule:
+    # 12:00 UTC = 8:00 AM ET during daylight saving (roughly Mar-Nov).
+    # During standard time (Nov-Mar) ET is UTC-5, so this actually fires
+    # at 7:00 AM ET instead of 8:00 AM. If exact timing matters, update
+    # this line to "0 13 * * *" in November and back to "0 12 * * *" in
+    # March, GitHub Actions cron doesn't follow DST automatically.
+    - cron: '0 12 * * *'
+  workflow_dispatch: {} # lets you trigger a run manually from the Actions tab, useful for testing
+
+permissions:
+  contents: write # needed so the workflow can commit the updated state.json back
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Post today's carousel to Instagram
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: node post-to-instagram.js
+
+      - name: Commit updated posting state
+        run: |
+          git config user.name "stratum-bot"
+          git config user.email "actions@github.com"
+          git add state.json
+          git diff --quiet --cached || git commit -m "chore: advance posting state"
+          git push
