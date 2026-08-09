@@ -46,12 +46,24 @@ function cover({ kicker = 'Stratum', eyebrow = '', title, sub = '', bgImage = ''
       // text wraps automatically instead of overflowing, so a too-long
       // segment silently becomes 3-4 lines rather than spilling sideways.
       var desiredLines = (span.innerHTML.match(/<br\\s*\\/?>/gi) || []).length + 1;
-      var size = 96;
-      h1.style.fontSize = size + 'px';
-      function lineCount(){ return span.getClientRects().length; }
-      while (lineCount() > desiredLines && size > 44) {
-        size -= 2;
+      function fit(){
+        var size = 136;
         h1.style.fontSize = size + 'px';
+        function lineCount(){ return span.getClientRects().length; }
+        while (lineCount() > desiredLines && size > 56) {
+          size -= 2;
+          h1.style.fontSize = size + 'px';
+        }
+      }
+      // Run only after the web font has actually finished loading. Fitting
+      // against a temporary fallback font (during load, or if the font
+      // request is ever blocked/slow) measures the wrong glyph widths and
+      // locks in a size that's too small once the real font swaps in.
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function(){ fit(); h1.dataset.fitted = 'true'; });
+      } else {
+        fit();
+        h1.dataset.fitted = 'true';
       }
     })();
   </script>`;

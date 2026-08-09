@@ -86,6 +86,17 @@ async function main() {
       const tmpFile = path.join(TMP_DIR, `${carousel.slug}-${i}.html`);
       fs.writeFileSync(tmpFile, html);
       await page.goto(pathToFileURL(tmpFile).href, { waitUntil: 'networkidle0' });
+      if (slide.type === 'cover') {
+        // Wait for the title auto-fit script to actually finish (it runs
+        // after the web font loads), rather than trusting that networkidle0
+        // happened to land after it. Closes a real race condition, not a
+        // hypothetical one, caught this shrinking a title to nothing when
+        // font loading was slow.
+        await page.waitForFunction(
+          () => document.getElementById('cover-title')?.dataset.fitted === 'true',
+          { timeout: 5000 }
+        ).catch(() => console.warn(`  warning: title fit didn't confirm in time for slide ${i + 1} of ${carousel.slug}, check this one`));
+      }
 
       const filename = `slide-${String(i + 1).padStart(2, '0')}.png`;
       await page.screenshot({ path: path.join(dir, filename) });
